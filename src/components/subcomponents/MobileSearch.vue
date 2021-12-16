@@ -1,0 +1,48 @@
+<template>
+    <div class="search-form_mobv" id="form_mobv" :class="{active : activeBtn}">
+        <form autocomplete="off">
+            <input type="search" v-model="searchResidence" class="search-input" placeholder="Поиск" name="search" id="search">
+            <router-link
+                to="/newbuildings"
+                @click.native="InlineButtonClickHandler"
+            >
+                <span v-html="search">
+                    {{ search }}
+                </span>
+            </router-link>
+        </form>
+    </div>
+</template>
+<script>
+import router from '../../router'
+export default {
+    data() {
+        return{
+            search: '<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.6694 24.1535L20.1784 17.9029C21.7873 16.0139 22.7571 13.5943 22.7571 10.9571C22.7571 4.90816 17.6602 0 11.3786 0C5.09143 0 0 4.90816 0 10.9571C0 17.0061 5.09143 21.9143 11.3786 21.9143C14.1171 21.9143 16.6243 20.9857 18.5859 19.4363L25.0769 25.6816C25.5178 26.1061 26.2286 26.1061 26.6694 25.6816C27.1102 25.2624 27.1102 24.5727 26.6694 24.1535ZM11.3786 19.7335C6.34776 19.7335 2.25918 15.7963 2.25918 10.9571C2.25918 6.11796 6.34776 2.17551 11.3786 2.17551C16.4039 2.17551 20.498 6.11796 20.498 10.9571C20.498 15.7963 16.4039 19.7335 11.3786 19.7335Z" fill="white"/></svg>',
+            searchResidence: '',
+            activeBtn: false
+        }
+    },
+    created(){
+        this.$root.$on('searchMobile', this.searchBtn)
+    },
+    methods:{
+        InlineButtonClickHandler(event) {
+            this.$root.$emit('appSidebarInlineButtonClick', this.searchResidence);
+            this.activeBtn = false
+        },
+        searchBtn(){
+            this.activeBtn = !this.activeBtn
+        },
+        filtredSearchTest(){
+            this.$root.$emit('searchResult', this.searchResidence)
+        }
+    },
+    mounted(){
+
+    },
+    updated(){
+
+    }
+}
+</script>

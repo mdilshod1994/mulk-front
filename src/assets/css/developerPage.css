@@ -1,0 +1,431 @@
+.single-developer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.single-dev__content{
+    padding: 65px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.single-dev__bordered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 50px;
+}
+.single-dev__logo{
+    width: 160px;
+    height: 190px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    background: url('../img/developers/bgofLogo.png');
+    background-size: contain;
+}
+.single-dev__logo img{
+    max-height: 100%;
+}
+.single-dev-wrapper{ 
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    justify-content: space-between;
+}
+.single-dev__info-text{
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.5s;
+    line-height: 18px;
+    font-size: 16px;
+}
+.single-dev__info-text.active{
+    height: 100%;
+}
+.single-dev__info-text p span{
+    font-weight: bold;
+}
+.single-dev__projects{
+    width: 242px;
+    flex-shrink: 0;
+    margin-left: 50px;
+}
+.single-dev__project{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.single-dev__project:last-of-type{
+    margin-bottom: 0;
+}
+.single-dev__project_icon{
+    margin-right: 20px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.single-dev__project-info p:first-of-type{
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.single-dev__project-info p:first-of-type::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 46px;
+    height: 2px;
+    background: rgba(78, 162, 218, 1);
+}
+.single-dev__info-btn{
+    margin-top: 20px;
+    color: #4EA2DA;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.single-dev__info-btn.active{
+    margin-top: 0;
+}
+.single-dev__info-btn span{
+    margin-left: 6px;
+    margin-bottom: 4px;
+    transition: transform 0.4s;
+}
+.single-dev__info-btn span.active{
+    transform: rotate(180deg);
+    margin-bottom: -7px;
+}
+.developers-wrap__content p:last-of-type span{
+    font-weight: bold;
+}
+.single-dev__residences{
+    background: #ECECEC;
+    padding: 35px 0 20px;
+}
+.single-dev__residences-title{
+    display: flex;
+    justify-content: space-between;
+}
+.single-dev__title-wrapper h2{
+    font-size: 25px;
+    color: rgba(78, 162, 218, 1);
+}
+.single-dev__title-wrapper p{
+    font-size: 16px;
+    color: #4F4F4F;
+}
+.single-dev__buttons-filter button{
+    background: #F3F3F7;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    width: 207px;
+    height: 33px;
+    margin-right: 20px;
+    color: rgba(130, 130, 130, 1);
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.4s;
+}
+.single-dev__buttons-filter button:last-of-type{
+    margin-right: 0;
+}
+.single-dev__buttons-filter button:hover{
+    background: #4EA2DA;
+    color: #F2F2F2;
+}
+.single-dev__residences-wrapper{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    overflow-y: scroll;
+}
+.single-dev__residences-wrapper .single-dev__item{
+    margin: 5px 20px 15px;
+}
+.single-dev__residences-wrapper .single-dev__item:first-of-type{
+    margin-left: 50px;
+}
+.single-dev__residences-wrapper .single-dev__item:last-of-type{
+    margin-right: 50px;
+}
+.single-dev__contacts{
+    padding: 65px 0;
+}
+.single-dev__contact-info{
+    padding: 50px 60px;
+}
+.single-dev__contact-info{
+    width: 527px;
+    background: linear-gradient(75.08deg, #EFEFEF 2.51%, #D2D2D2 100%);
+    border-radius: 39px 0 0 39px;
+}
+.single-dev__contact-title{
+    margin-bottom: 20px;
+}
+.single-dev__contact-title h2{
+    color: #4EA2DA;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+.single-dev__contact-title p{
+    font-size: 16px;
+    color: #4F4F4F;
+}
+.single-dev__contact-info__title{
+    font-size: 25px;
+    color: #000;
+}
+.single-dev__contact-info__text{
+    color: #6D6D6D;
+    margin: 7px 0 20px;
+}
+.single-dev__contact-info__btn{
+    width: 206px;
+    height: 31px;
+    border-radius: 6px;
+    background: #4EA2DA;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.single-dev__contact-location{
+    border-radius: 0 39px 39px 0;
+    overflow: hidden;
+}
+.single-dev__contact-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.single-dev__contact-contact{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.single-dev__contact-contact a{
+    background: linear-gradient(224deg, rgb(136, 156, 150), rgb(178, 179, 179), rgb(207, 228, 221));
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-size: 100%;
+}
+.single-dev__contact-contact a:hover{
+    background-size: 500%;
+    background-position: right;
+}
+.single-dev__contact-contact a span{
+    margin-right: 10px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+}
+.border-single-dev-logo{
+    height: 31px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(27deg, rgb(255, 255, 255), rgb(179 179 179));
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 1px;
+    transition: 0.5s;
+    background-size: 100%;
+}
+.single-dev__contact-contact a:hover .border-single-dev-logo{
+    background-size: 200%;
+    background-position: center;
+}
+#second_single-dev__info{
+    display: none;
+}
+.single-dev__contact-location .dev-map .vue2leaflet-map{
+    width: 800px !important;
+}
+
+@media (max-width: 1366px){
+    .single-dev__residences-wrapper .single-dev__item:first-of-type{
+        margin-left: 35px;
+    }
+    .single-dev__contact-location .dev-map .vue2leaflet-map{
+        width: 757px !important;
+    }
+}
+@media (max-width: 1280px){
+    .single-dev__residences-wrapper .single-dev__item:first-of-type{
+        margin-left: 20px;
+    }
+    .single-dev__contact-location .dev-map .vue2leaflet-map{
+        width: 700px !important;
+    }
+}
+@media (max-width: 1024px){
+    .single-dev__contact-info{
+        width: 485px;
+    }
+    .single-dev__contact-location .dev-map .vue2leaflet-map{
+        width: 486px !important;
+    }
+}
+@media (max-width: 992px){
+    .single-dev__contact-location{
+        display: none;
+    }
+    .single-dev__contact-wrap{
+        justify-content: center;
+    }
+    .single-dev__contact-info{
+        border-radius: 39px;
+    }
+}
+@media (max-width: 768px){
+    .single-dev__residences-title{
+        flex-direction: column;
+    }
+    .single-dev__title-wrapper{
+        margin-bottom: 20px;
+    }
+    .single-dev__info-btn.active{
+        margin-top: 10px;
+    }
+    .single-dev__info-btn{
+        margin-top: 10px;
+    }
+    .single-dev__info-text{
+        height: 200px;
+    }
+    .single-dev-wrapper{
+        width: 48%;
+        margin-top: 0;
+        align-items: center;
+    }
+    .single-dev__bordered{
+        width: 48%;
+        margin-right: 0;
+        justify-content: end;
+    }
+    .single-dev__projects{
+        margin-left: 0;
+    }
+    #first_single-dev__info{
+        display: none;
+    }
+    #second_single-dev__info{
+        display: block;
+        margin-bottom: 65px;
+    }
+}
+@media (max-width: 428px){
+    .single-dev__contact-info__text{
+        margin: 5px 0 13px;
+    }
+    .single-dev__contact-contact{
+        margin-bottom: 38px;
+    }
+    .border-single-dev-logo{
+        font-size: 14px;
+        padding: 0 9px;
+    }
+    .single-dev__contact-title{
+        margin-bottom: 15px;
+    }
+    .single-dev__contact-title p{
+        font-size: 12px;
+    }
+    .single-dev__contact-title h2{
+        font-size: 20px;
+    }
+    .single-dev__contact-info{
+        padding: 35px 45px;
+    }
+    .single-dev__residences-wrapper{
+        margin-top: 30px;
+    }
+    .single-dev__title-wrapper{
+        margin-bottom: 30px;
+    }
+    .single-dev__buttons-filter{
+        display: flex;
+    }
+    .single-dev__buttons-filter button{
+        font-size: 14px;
+    }
+    .single-dev__content{
+        justify-content: flex-start;
+    }
+    .single-dev__bordered{
+        width: 142px;
+        height: 169px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+    }
+    .single-dev__projects{
+        width: auto;
+    }
+    .single-dev__project{
+        width: 200px;
+    }
+    .single-dev__logo{
+        width: 139px;
+        height: 166px;
+    }
+    .single-dev__project_icon{
+        width: 38px;
+    }
+    .single-dev__project-info p{
+        font-size: 14px !important;
+    }
+}
+@media (max-width: 414px){
+    .border-single-dev-logo{
+        font-size: 13px;
+    }
+}
+@media (max-width: 375px){
+    .single-dev__project{
+        width: auto;
+    }
+    .single-dev__projects{
+        flex-shrink: inherit;
+    }
+    .single-dev__contact-info{
+        padding: 35px;
+    }
+    .border-single-dev-logo{
+        font-size: 11px;
+    }
+    .developers-wrap{
+        padding: 30px 20px;
+    }
+    .developers-wrap__img{
+        margin-right: 20px;
+    }
+    .single-dev__buttons-filter button{
+        font-size: 12px;
+    }
+    .single-dev__title-wrapper h2{
+        font-size: 22px;
+    }
+}

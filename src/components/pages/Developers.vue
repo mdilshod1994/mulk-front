@@ -3,7 +3,7 @@
         <Header class="descTop-version"/>
             <div class="container container_custom">
                 <h1 class="developer__title">
-                    Застройщики Душанбе
+                    Застройщики Таджикистана
                 </h1>
                 <!-- <p class="developer__subtitle">
                     Строительные компании Душанбе

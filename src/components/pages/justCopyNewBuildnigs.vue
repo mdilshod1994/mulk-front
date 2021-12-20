@@ -5,7 +5,7 @@
                 <div class="search-form">
                     <form action="">
                         <input type="search" v-model="searchResidence" class="search-input" placeholder="Поиск" name="search" id="search">
-                        <input @click="filtredSearch" class="search-btn" value="найти">
+                        <input @click="filtredSearch" class="search-btn" value="НАЙТИ">
                     </form>
                 </div>
                 <div class="result-search">

@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-         <router-link class="wrapper-slider-recommendation__link" id="second" to="/newbuildings">
+         <router-link class="wrapper-slider-recommendation__link" id="second" to="/residences">
             ещё
         </router-link>
     </div>
@@ -110,7 +110,7 @@ export default {
             f: require('../../assets/img/recomandations/6.png'),
             g: require('../../assets/img/recomandations/7.png'),
             h: require('../../assets/img/recomandations/8.png'),
-            fadeIn: false,
+            fadeIn: true,
         }
     },
     computed:{

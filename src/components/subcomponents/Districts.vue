@@ -2,7 +2,7 @@
     <div class="districts">
         <div class="container">
             <div class="wrapper-districts">
-                <router-link :to="'/newbuildings'" class="wrapper-districts-block" v-for="district in reverseDistricts" :key="district.id">
+                <router-link :to="'/residences'" class="wrapper-districts-block" v-for="district in reverseDistricts" :key="district.id">
                     <div class="wrapper-districts-content">
                         <p>
                             Район

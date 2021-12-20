@@ -76,6 +76,10 @@
     height: calc(100vh - 65px);
   }
 
+  .map .vue2leaflet-map{
+    height: calc(100vh - 65px) !important;
+  }
+
   .footer {
     display: none;
   }
@@ -211,7 +215,7 @@ export default {
     },
 
     onMarkerClick(id) {
-      this.$router.push({name: "jkh", query: {item: id}})
+      this.$router.push({path: "/residence/" + id})
 
     }
   },

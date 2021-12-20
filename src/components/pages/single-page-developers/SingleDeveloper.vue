@@ -190,7 +190,7 @@
                             <p class="single-dev__contact-info__text">
                                 на бесплатную консультацию от застройщика
                             </p>
-                            <button class="single-dev__contact-info__btn">
+                            <button class="single-dev__contact-info__btn" @click="isActive = true">
                                 Отпарвить заявку
                             </button>
                         </div>
@@ -218,6 +218,21 @@
             </div>
         </div>
         <Footer />
+        <div class="request-form-modal" @click="isActive = false" :class="{active : isActive}">
+            <div class="request-form-modal__body">
+                <img class="request-form-modal__btn_close" :src="clsBtn" alt="">
+                <div class="request-form-modal__content" @click.stop="">
+                    <h2 class="request-form-modal__title">
+                        Оставьте заявку и мы свяжемся с вами в ближайшее время
+                    </h2>
+                    <form class="form-send-req form-send-req_main-popup">
+                        <input type="name" placeholder="Имя и Фамилия">
+                        <input type="tel" class="form-control" id="telephone">
+                        <input type="submit" class="form-send-req__btn form-send-req__btn_main" value="отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -228,6 +243,10 @@ import axios from 'axios'
 import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
 import { latLng, icon } from "leaflet";
 import { Icon } from 'leaflet';
+
+import 'intl-tel-input/build/css/intlTelInput.css';
+import 'intl-tel-input/build/js/intlTelInput.js';
+import intlTelInput from 'intl-tel-input';
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -249,6 +268,8 @@ export default {
     },
     data(){
         return{
+            clsBtn: require('../../../assets/img/channel/close.svg'),
+            isActive: false,
             numberLat: 38.57420592623844,
             numberLng: 68.7916660308838,
             zoom: 13,
@@ -297,7 +318,7 @@ export default {
             return latLng(lat , lng)
         },
         pushArrayToJkh(residence){
-            this.$router.push({name:"jkh", query:{item: residence.id}})
+            this.$router.push({path:"/residence/" + residence.id})
         },
         toShowContent(){
             this.contentShow = true
@@ -355,6 +376,12 @@ export default {
             let justByDeveloper = allResidences.filter(idOfDeveloper => idOfDeveloper.developer_id === currentIdDev)
             this.residencesOfDev = justByDeveloper
         })
+
+        const input = document.querySelector("#telephone");
+        intlTelInput(input, {
+            // any initialisation options go here
+            preferredCountries: ["tj", "us", "ru"],
+        })
     },
     destroyed(){
 
@@ -362,3 +389,6 @@ export default {
 
 }
 </script>
+
+<style>
+</style>

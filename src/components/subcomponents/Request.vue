@@ -20,7 +20,7 @@
                     <h2 class="request-form-modal__title">
                         Заполните заявку и мы свяжемся с вами в ближайшее время
                     </h2>
-                    <form class="form-send-req">
+                    <form class="form-send-req form-send-req_main-popup">
                         <input type="name" placeholder="Имя и Фамилия">
                         <input type="tel" class="form-control" id="telephone">
                         <input type="submit" class="form-send-req__btn form-send-req__btn_main" value="отправить">

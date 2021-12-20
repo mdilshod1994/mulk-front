@@ -5,15 +5,15 @@
 }
 
 .layouts-section-wrapper {
-  padding: 36px 0 64px;
+  padding: 36px 0 65px;
 }
 
 .layouts-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  column-gap: 113px;
-  row-gap: 78px;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 65px;
 }
 
 .layouts-wrapper .plan-wrapper {
@@ -21,7 +21,7 @@
 }
 
 .layouts-section-wrapper .tabs-nav-menu {
-  margin-bottom: 82px;
+  margin-bottom: 57px;
 }
 
 .layouts-section-wrapper .tabs-nav-menu div:first-of-type {
@@ -62,11 +62,31 @@
   line-height: 29px;
 }
 
+.layouts-plan-wrapper{
+  width: 296px;
+  padding: 14.8px;
+}
+.layouts-plan-wrapper .plan-wrapper__img_layouts{
+  height: 210px;
+}
+.layouts-plan-wrapper .plan-wrapper__info .plan-wrapper__info-qnty{
+  margin-bottom: 20px;
+}
+.layouts-plan-wrapper .plan-wrapper__img_layouts img{
+  object-fit: contain;
+}
+.layouts-plan-wrapper .plan-wrapper__info-price{
+  margin-bottom: 10px;
+}
 .layouts-plan-wrapper .plan-wrapper__info-price div{
   margin-right: 10px;
 }
 .layouts-plan-wrapper .plan-wrapper__info-price div svg {
-  width: 20px;
+  width: 27px;
+  height: 27px;
+}
+.layouts-plan-wrapper .plan-wrapper__info .plan-wrapper__info-qnty p span svg{
+  width: 23px;
   height: 20px;
 }
 
@@ -84,7 +104,10 @@
   background: #4EA2DA;
   color: #fff;
 }
-
+.modal-layout-info-content .modal-layout-content__text p span svg{
+  width: 23px;
+  height: 20px;
+}
 .tabs-nav-menu .tabs-nav-menu__btn .layouts-tabs-nav__menu {
   margin-right: 15px;
 }
@@ -123,6 +146,10 @@
   border-radius: 6px;
   outline: none;
 }
+.form-layout form input::placeholder{
+  color: #CCCBCB ;
+}
+
 .form-layout form .btn-layout {
   border-radius: 6px;
   color: #4EA2DA;
@@ -137,12 +164,11 @@
 .tabs-nav-menu .tabs-nav-menu__btn.active .layouts-tabs-nav__menu svg path {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
-  stroke: #fff;
   fill: #fff;
 }
 
 .pagination-layouts{
-  margin-top: 70px;
+  margin-top: 65px;
   display: flex;
   justify-content: center;
 }
@@ -190,37 +216,9 @@
 .pagination-layouts-page span svg path{
   fill: #000;
 }
-@media (max-width: 1366px) {
-  .layouts-wrapper {
-    gap: 100px;
-  }
-}
-@media (max-width: 1339px) {
-  .layouts-wrapper {
-    gap: 90px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .layouts-wrapper {
-    gap: 78px;
-    justify-content: center;
-  }
-}
-
 @media (max-width: 1024px) {
-  .layouts-wrapper {
-    gap: 117px;
-  }
   .tabs-nav-menu__btn span {
     font-size: 12px;
-  }
-
-}
-
-@media (max-width: 992px) {
-  .layouts-wrapper {
-    gap: 100px;
   }
 }
 
@@ -262,8 +260,6 @@
     right: -28px;
   }
   .layouts-wrapper {
-    gap: 20px;
-    row-gap: 70px;
     justify-content: space-around;
   }
   .tabs-nav-menu__btn span {
@@ -275,6 +271,13 @@
 }
 
 @media (max-width: 428px) {
+  .layouts-plan-wrapper .plan-wrapper__info-qnty p span svg{
+    width: 25px;
+    height: 25px;
+  }
+  .layouts-plan-wrapper .plan-wrapper__info .plan-wrapper__info-price span{
+    font-size: 25px;
+  }
   .modal-layout-content{
     justify-content: flex-start;
   }
@@ -331,7 +334,7 @@
     padding: 20px;
   }
 
-  .plan-wrapper__img_layouts {
+  .layouts-plan-wrapper .plan-wrapper__img_layouts {
     width: 347.65px;
     height: 274.7px;
     margin-bottom: 12px;
@@ -347,8 +350,15 @@
   }
   .layouts-plan-wrapper .plan-wrapper__info-price div {
     font-size: 25px;
+    display: flex;
   }
-
+  .layouts-plan-wrapper .plan-wrapper__info button div{
+    width: 19px;
+  }
+  .layouts-plan-wrapper .plan-wrapper__info button div svg{
+    width: 19px;
+    height: 22px;
+  }
   .layouts-plan-wrapper .plan-wrapper__info-price div svg {
     width: 33px;
     height: 33px;
@@ -356,7 +366,7 @@
 
   .layouts-plan-wrapper .plan-wrapper__info-price {
     justify-content: center;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
   }
 
   .layouts-plan-wrapper .plan-wrapper__info button {
@@ -378,12 +388,12 @@
     padding: 20px;
   }
 
-  .plan-wrapper__img_layouts {
+  .layouts-plan-wrapper .plan-wrapper__img_layouts {
     width: 100%;
     height: 274.7px;
     margin-bottom: 12px;
   }
-  .plan-wrapper__img_layouts img {
+  .layouts-plan-wrapper .plan-wrapper__img_layouts img {
     width: 100%;
   }
 

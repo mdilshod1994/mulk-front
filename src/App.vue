@@ -4,6 +4,7 @@
     <router-view />
     <MobileNavbar :class="{ deActiveMargin : $route.name === 'map'}"/>
     <MobileSearch />
+   
   </div>
 </template>
 
@@ -12,12 +13,19 @@ import HeaderMobVersion from './components/subcomponents/HeaderMobVersion.vue'
 import MobileNavbar from './components/subcomponents/Mob-navbar.vue'
 import MobileSearch from './components/subcomponents/MobileSearch.vue'
 
+
 export default {
   name: 'App',
   components:{
     MobileNavbar,
     MobileSearch,
-    HeaderMobVersion: HeaderMobVersion
+    HeaderMobVersion,
+   
+  },
+  data(){
+    return{
+     
+    }
   },
   created(){
     this.$root.$on('mylogouthandler', this.logoutEventHandler)
@@ -36,6 +44,9 @@ export default {
     searchBtn(){
 
     }
+  },
+  mounted(){
+    
   }
 }
 </script>

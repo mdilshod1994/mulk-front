@@ -13,13 +13,9 @@ const store = new Vuex.Store({
         districts:[],
         developers:[],
         newBuildings:[],
-        videos:[],
-        toFunct: false
+        videos:[]
     },
     mutations:{
-        CHANGE_TO_TRUE:(state)=>{
-            state.toFunct = true
-        },
         SET_DISTRICTS_TO_STATE:( state, districts) => {
             state.districts = districts
         },
@@ -34,9 +30,6 @@ const store = new Vuex.Store({
         },
     },
     actions:{
-        TO_MAIN({commit}){
-            commit('CHANGE_TO_TRUE')
-        },
         GET_DISTRICTS({commit}){
             return axios(config.BASE_URL + 'district', {
                 method:"GET"
@@ -91,9 +84,6 @@ const store = new Vuex.Store({
         }
     },
     getters:{
-        TO_MAIN_GETTER(state){
-            return state.toFunct
-        },
         DISTRICTS(state){
             return state.districts
         },

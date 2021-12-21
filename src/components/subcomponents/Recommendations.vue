@@ -93,6 +93,7 @@
             ещё
         </router-link>
     </div>
+    
 </template>
 <script>
 import { mapActions, mapGetters } from 'vuex'
@@ -132,6 +133,9 @@ export default {
         pushArrayToJkh(building){
             this.$router.push({path:'/residence/' + building.id})
         },
+    },
+    created(){
+        
     },
     mounted(){
         this.GET_NEW_BUILDING()

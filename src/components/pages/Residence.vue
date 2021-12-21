@@ -428,6 +428,7 @@
         </div>
       </div>
     </div>
+    <Lodaer v-if="dataLoaded"/>
   </div>
 </template>
 <script>
@@ -453,6 +454,7 @@ Icon.Default.mergeOptions({
   shadowUrl: require('../../assets/img/map/1.svg'),
 });
 
+import Lodaer from '../loader/project-loader.vue'
 
 Vue.use(VueAxios, axios)
 
@@ -468,6 +470,7 @@ export default {
     LTileLayer,
     LMarker,
     LIcon,
+    Lodaer
   },
   props: {
     options: {
@@ -477,6 +480,7 @@ export default {
   },
   data() {
     return {
+      dataLoaded: true,
       toChangeBtnFeatures: false,
       mainLayoutImg: {},
       toChangeBtn: false,
@@ -695,6 +699,12 @@ export default {
           }
         }
         this.arrayLayouts = newArrayTest
+      })
+      .catch((error)=>{
+        console.log('error', error);
+      })
+      .finally(()=>{
+        this.dataLoaded = false
       })
     this.$nextTick(() => {
       this.$refs.myMap.mapObject.scrollWheelZoom.disable();

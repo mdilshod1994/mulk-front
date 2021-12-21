@@ -9,6 +9,7 @@
     <Channel />
     <Request />
     <Footer />
+    <Loader v-if="dataLoaded"/>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import Partners from './subcomponents/Partners.vue'
 import Channel from './subcomponents/Channel.vue'
 import Request from './subcomponents/Request.vue'
 import Footer from './subcomponents/Footer.vue'
+import Loader from '../components/loader/project-loader.vue'
 // import SoonPage from './pages/soon-page/Soon-page.vue'
 
 export default {
@@ -35,16 +37,22 @@ export default {
     Channel,
     Request,
     Footer,
+    Loader
     // SoonPage,
   },
   data () {
     return {
-      isActive: false
+      isActive: false,
+      dataLoaded: true,
     }
   },
   created(){
     this.$root.$on('mylogouthandler', this.logoutEventHandler)
     this.$root.$on('searchMobile', this.searchBtn)
+    let vm = this
+    window.setTimeout(() => {
+      vm.dataLoaded = false
+    }, 600);
   },
   computed:{
 
@@ -54,9 +62,12 @@ export default {
       //do your stuff here.
     },
     searchBtn(){
-
+      
     }
   },
+  mounted(){
+
+  }
 }
 </script>
 
